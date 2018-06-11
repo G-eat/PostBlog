@@ -32,4 +32,9 @@ class AddFriends extends Controller
       return back()->with('success','You Added as a New Friend.');
 
     }
+
+    public function chat()
+    {
+      return view('users.chat');
+    }
 }

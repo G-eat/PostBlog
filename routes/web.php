@@ -35,3 +35,5 @@ Route::get('like/{id}' , 'PostsComent@like');
 Route::get('dislike/{id}' , 'PostsComent@dislike');
 
 Route::get('/add_friend/{id}', 'AddFriends@add');
+
+Route::get('/chat' , 'AddFriends@chat' );
