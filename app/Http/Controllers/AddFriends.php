@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Auth;
 use App\Friend;
+use App\Message;
+use App\User;
 
 class AddFriends extends Controller
 {
@@ -33,8 +35,45 @@ class AddFriends extends Controller
 
     }
 
-    public function chat()
+    public function chat($id)
     {
-      return view('users.chat');
+      $friend = User::find($id);
+      $you = Auth::user()->name;
+      return view('users.chat')->with('friend',$friend)->with('you',$you);
+    }
+
+    public function postchat($id)
+    {
+      $user = Auth::user()->name;
+      // $mes = Message::where('user_id' , 'LIKE' , $user)->where('friend_id' , 8)->get();
+      // return $mes;
+      $friend = Friend::where('friend_id' ,$id)->get();
+      return Message::where(function($query) use($id){$query->where('user_id' , 'LIKE' , Auth::user()->name)->where('friend_id' , $id);})->orWhere(function($query) use($id){$query->where('user_id',$id)->where('friend_id','LIKE',Auth::user()->name);})->get();
+    }
+
+    public function ch()
+    {
+      $message = new Message;
+      $message->user_id = Auth::user()->name;
+      $message->friend_id = request()->get('friend_id');
+      $message->message = request()->get('message');
+      $message->save();
+
+        return [];
+
+      //event(new App\Events\BroadcastChat($message));
+    }
+
+    public function chatrom()
+    {
+      $user = Auth()->user()->id;
+      $friends = Friend::where('user_id',$user)->get();
+      $users = User::all();
+      // foreach ($friends as $friend) {
+      //   foreach ($users as $user) {
+      //     // code...
+      //   }
+      // }
+      return view('users.chatrom')->with('friends',$friends)->with('users',$users);
     }
 }
