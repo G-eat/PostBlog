@@ -27,7 +27,7 @@ Route::post('/profile/update/{id}','ProfilePic@update');
 Route::resource('/posts','PostsController');
 
 Route::get('/users','SearchUsersController@index');
-Route::get('/user/{id}','SearchUsersController@show');
+Route::get('/users/{id}','SearchUsersController@show');
 
 Route::post('posts/comment/{id}' , 'PostsComent@store');
 

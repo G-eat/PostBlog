@@ -26,7 +26,7 @@
                             </div>
 
                             <div class="col-md-10 col-sd-01">
-                              <h1><a style='color:black' href="/user/{{$user->id}}">{{$user->name}}</a></h1>
+                              <h1><a style='color:black' href="/users/{{$user->id}}">{{$user->name}}</a></h1>
                             </div>
 
                           </div>  <!--row --><br>
