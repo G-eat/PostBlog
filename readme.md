@@ -9,19 +9,20 @@
 
 ## How to clone :
 On Command Propt or Git Bash:
-1 [git clone https://github.com/G-eat/PostBlog.git]((https://laravel.com/docs/container)).
-2 Cd to project
-3 Composer install.
-4 copy .env.example .env
-5 php artisan key:generate
-6 Setup .env(DB_DATABASE,DB_USERNAME,DB_PASSWORD) with your database.
-7 Setupp .env(Pusher) with your pusher for real chat.
-8 php artisan migrate.
-9 php storage:link
-10 In storage/app/public/profile_photo upload photo named noImage.png
+
+1. [git clone https://github.com/G-eat/PostBlog.git]((https://laravel.com/docs/container)).
+2. Cd to project
+3. Composer install.
+4. copy .env.example .env
+5. php artisan key:generate
+6. Setup .env(DB_DATABASE,DB_USERNAME,DB_PASSWORD) with your database.
+7. Setupp .env(Pusher) with your pusher for real chat.
+8. php artisan migrate.
+9. php storage:link
+10. In storage/app/public/profile_photo upload photo named noImage.png
 
 ## Errors
 
-- #copy .env.example .env ######in ###git bash ######can it can have problems so try this in Command Prompt
+- copy **.env.example .env in _git bash_** can it can have problems so try this in Command Prompt
 
-## Andi G-eat
+# Andi G-eat
