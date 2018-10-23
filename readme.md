@@ -26,4 +26,4 @@ On Command Propt or Git Bash:
 
 - copy **.env.example .env in _git bash_**  can have problems so try this in Command Prompt
 
-# Andi G-eat
+###### Andi G-eat
