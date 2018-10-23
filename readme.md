@@ -20,9 +20,10 @@ On Command Propt or Git Bash:
 8. php artisan migrate.
 9. php storage:link
 10. In storage/app/public/profile_photo upload photo named noImage.png
+11. In storage/app/public/post_photo upload photo named noImage.jpg
 
 ## Errors
 
-- copy **.env.example .env in _git bash_** can it can have problems so try this in Command Prompt
+- copy **.env.example .env in _git bash_**  can have problems so try this in Command Prompt
 
 # Andi G-eat
