@@ -18,7 +18,7 @@ On Command Propt or Git Bash:
 6. Setup .env(DB_DATABASE,DB_USERNAME,DB_PASSWORD) with your database.
 7. Setupp .env(Pusher) with your pusher for real chat.
 8. php artisan migrate.
-9. php storage:link
+9. php artisan storage:link
 10. In storage/app/public/profile_photo upload photo named noImage.png
 11. In storage/app/public/post_photo upload photo named noImage.jpg
 
